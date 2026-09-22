@@ -1,17 +1,149 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
+<!-- source: obsidian vault projects/personal/portfolio.md -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Yoshitaka Yamazaki</title>
+  <meta name="description" content="Started as an SRE / infrastructure engineer, now working full-cycle at an AI startup: design, implementation, operations, and hands-on adoption support.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fbfbfa;
+      --fg: #1b1e20;
+      --muted: #62676c;
+      --link: #2f6f62;
+      --accent-soft: #cfe6de;
+      --border: #dddddd;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14161a;
+        --fg: #e6e6e6;
+        --muted: #a3a9ad;
+        --link: #7fd4bb;
+        --accent-soft: #2a4a42;
+        --border: #3a3d42;
+      }
+    }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
+      line-height: 1.75;
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      margin-bottom: 0.35rem;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+    }
+    header p { margin: 0.25rem 0; color: var(--muted); font-size: 0.95rem; }
+    h2 {
+      margin-top: 2.75rem;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      border-bottom: 2px solid var(--link);
+      padding-bottom: 0.4rem;
+      display: inline-block;
+    }
+    a { color: var(--link); text-decoration: underline; }
+    a:hover, a:focus-visible { text-decoration-thickness: 2px; }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.75rem; }
+    dt { font-weight: bold; margin-top: 0.75rem; }
+    dd { margin-left: 0; margin-bottom: 0.5rem; }
+    footer { margin-top: 3rem; }
+
+    .timeline { list-style: none; padding-left: 0; }
+    .entry {
+      display: grid;
+      grid-template-columns: 10.5rem 1fr;
+      gap: 0.25rem 1.25rem;
+      padding: 0.9rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .entry:first-child { border-top: none; padding-top: 0; }
+    .when { color: var(--link); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 9rem 1fr;
+      row-gap: 0.5rem;
+      column-gap: 1rem;
+    }
+    .skills-grid dt { margin-top: 0; }
+    .skills-grid dd { margin-bottom: 0; }
+
+    @media (max-width: 480px) {
+      .entry { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skills-grid dd { margin-bottom: 0.75rem; }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Yoshitaka YAMAZAKI</h1>
+    <p>AI Solutions Engineer / ex-SRE</p>
+  </header>
+
   <main>
-    <h1>Yoshitaka Yamazaki</h1>
-    <p>Software engineer. Building personal automation tools and side projects.</p>
-    <nav>
-      <a href="https://github.com/yoshi65">GitHub</a>
-    </nav>
+    <section>
+      <h2>About</h2>
+      <p>Started as an SRE / infrastructure engineer, now working full-cycle at an AI startup: design, implementation, operations, and hands-on adoption support. On the side, I build personal automation tools and an always-on AI agent.</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li class="entry">
+          <span class="when"><strong>2025.07 –</strong></span>
+          <div>株式会社データインフォームド (DataInformed) — AI Solutions Engineer<br>
+          Design, build, and operate AI-powered systems; support adoption on the client side.</div>
+        </li>
+        <li class="entry">
+          <span class="when"><strong>2020.04 – 2025.06</strong></span>
+          <div>株式会社ビービット (beBit) — SRE / Infrastructure (joined as a new graduate)<br>
+          Operated service infrastructure; IaC and reliability improvements.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Research</h2>
+      <ul>
+        <li>慶應義塾大学大学院 理工学研究科 修了 (Keio University, Graduate School of Science and Technology), 2020</li>
+        <li>Tada S, <strong>Yamazaki Y</strong>, Yamamoto K, Fujii K, Yamada TG, Hiroi NF, Kimura A, Funahashi A. "Switching from weak to strong cortical attachment of microtubules accounts for the transition from nuclear centration to spindle elongation in metazoans." <em>Heliyon</em> 10(3), 2024. <a href="https://doi.org/10.1016/j.heliyon.2024.e25494">https://doi.org/10.1016/j.heliyon.2024.e25494</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <dl class="skills-grid">
+        <dt>Languages</dt>
+        <dd>Python, Shell, TypeScript</dd>
+        <dt>Infra / IaC</dt>
+        <dd>Terraform, GCP (Cloud Run, Firestore, GCS), AWS (Lambda), GitHub Actions, Kubernetes (k3s)</dd>
+        <dt>Frontend</dt>
+        <dd>Next.js</dd>
+        <dt>Practices</dt>
+        <dd>Clean Architecture / DDD, load testing (k6)</dd>
+        <dt>Tools</dt>
+        <dd>Claude Code (incl. running my own agents), Obsidian, custom keyboards (ZMK/QMK)</dd>
+      </dl>
+    </section>
   </main>
+
+  <footer>
+    <h2>Links</h2>
+    <ul>
+      <li>GitHub: <a href="https://github.com/yoshi65">https://github.com/yoshi65</a></li>
+      <li>Zenn: <a href="https://zenn.dev/yoshi65">https://zenn.dev/yoshi65</a></li>
+      <li>Qiita: <a href="https://qiita.com/yoshi65">https://qiita.com/yoshi65</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
