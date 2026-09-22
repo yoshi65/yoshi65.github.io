@@ -29,7 +29,8 @@
       background: var(--bg);
       color: var(--fg);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
-      line-height: 1.75;
+      font-size: 17px;
+      line-height: 1.65;
       max-width: 44rem;
       margin: 0 auto;
       padding: 2rem 1rem;
@@ -40,6 +41,9 @@
       letter-spacing: -0.02em;
     }
     header p { margin: 0.25rem 0; color: var(--muted); font-size: 0.95rem; }
+    header nav { margin-top: 0.5rem; font-size: 0.95rem; }
+    header nav a { color: var(--link); text-decoration: none; }
+    header nav a:hover, header nav a:focus-visible { text-decoration: underline; }
     h2 {
       margin-top: 2.75rem;
       margin-bottom: 1rem;
@@ -54,7 +58,6 @@
     li { margin-bottom: 0.75rem; }
     dt { font-weight: bold; margin-top: 0.75rem; }
     dd { margin-left: 0; margin-bottom: 0.5rem; }
-    footer { margin-top: 3rem; }
 
     .timeline { list-style: none; padding-left: 0; }
     .entry {
@@ -87,6 +90,7 @@
   <header>
     <h1>Yoshitaka YAMAZAKI</h1>
     <p>AI Solutions Engineer / ex-SRE</p>
+    <nav><a href="https://github.com/yoshi65">GitHub</a> · <a href="https://zenn.dev/yoshi65">Zenn</a> · <a href="https://qiita.com/yoshi65">Qiita</a></nav>
   </header>
 
   <main>
@@ -137,14 +141,5 @@
       </dl>
     </section>
   </main>
-
-  <footer>
-    <h2>Links</h2>
-    <ul>
-      <li>GitHub: <a href="https://github.com/yoshi65">https://github.com/yoshi65</a></li>
-      <li>Zenn: <a href="https://zenn.dev/yoshi65">https://zenn.dev/yoshi65</a></li>
-      <li>Qiita: <a href="https://qiita.com/yoshi65">https://qiita.com/yoshi65</a></li>
-    </ul>
-  </footer>
 </body>
 </html>
